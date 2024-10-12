@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Molecule Simulation</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+</head>
+<body>
+    <h1> Molecule Vibration Simulation</h1>
+    <div class="container">
+        <div class="button-container">
+            <button id="addCO2Button">Carbon Dioxide (CO₂)</button>
+            <button id="addH2OButton">Water (H₂O)</button>
+            <button id="addNO2Button">Nitrogen Dioxide (NO₂)</button> 
+            <button id="addCOButton">Carbon Monoxide (CO)</button>
+            <button id="addN2Button">Nitrogen (N₂)</button>
+            <button id="addO2Button">Oxygen (O₂)</button>
+            <button id="addNHButton">Ammonia (NH₃)</button>
+        </div>
+        
+        <svg id="simulationCanvas" width="800" height="500"></svg>
+        
+        <div class="light-buttons">
+            <button id="emitPhotonButton">Infrared</button>
+            <button id="microwaveBtn">Microwave</button>
+        </div>
+    </div>
+    
+    <button id="resetButton">Reset Simulation</button>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.17.1/matter.min.js"></script>
+    <script src="carbondioxide.js"></script>
+    <script src="water.js"></script>
+    <script src="NO2.js"></script>
+    <script src="CO.js"></script>
+    <script src="N2.js"></script>
+    <script src="O2.js"></script>
+    <script src="NH3.js"></script>
+    <script src="resetSimulation.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #1e1e1e; /* Dark background */
+    color: #f0f0f0; /* Light text color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #a0d2eb; /* Ice Cold */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for the title */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* Space between button container and light buttons */
+    align-items:flex-start; /* Align items at the start of the container */
+    width: 80%; /* Width of the main container */
+}
+
+/* Button container for molecule buttons */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Arrange buttons top to down */
+    gap: 15px; /* Space between buttons */
+    width: 20%; /* Width of the button container */
+    margin-right: 20px;
+}
+
+/* Light buttons container */
+.light-buttons {
+    display: flex;
+    flex-direction: column; /* Arrange light buttons top to down */
+    gap: 15px; /* Space between light buttons */
+    margin-left: 20px; /* Space between canvas and light buttons */
+}
+
+/* Simulation canvas styling */
+#simulationCanvas {
+    border: 2px solid #8458B3; /* Purple Pain border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #e5eaf5; /* Freeze Purple background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow effect */
+    flex-grow: 1; /* Allow the canvas to take up available space */
+    min-height: 500px; /* Minimum height for better visibility */
+}
+
+/* Button Styles */
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff; /* White text for buttons */
+    background-color: #a23ddd; /* Medium Purple for buttons */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+    width: 100%; /* Make all buttons the same width */
+    max-width: 200px; /* Optional: limit the maximum width of buttons */
+}
+
+button:hover {
+    background-color: #ec419f; /* Heavy Purple on hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+button:active {
+    transform: scale(0.95); /* Slightly shrink button on click */
+}
+
+/* Add a glowing effect for buttons */
+button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #4ea8de, 0 0 10px #4ea8de, 0 0 15px #4ea8de; /* Glowing effect */
+}
+
+/* Style for light buttons */
+.light-buttons button {
+    background-color: #5390d9; /* Blue for light buttons */
+}
+
+.light-buttons button:hover {
+    background-color: #72efdd; /* Bright pale mint on hover */
+}
+
+/* Styling for button containers to enhance visibility */
+.button-container, .light-buttons {
+    background-color: #2c2c2c; /* Darker background for button areas */
+    padding: 15px; /* Padding for button containers */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Styles for the reset button */
+#resetButton {
+    position: fixed; /* Fixed positioning to keep it in view */
+    background-color: #ff4444; /* Red background color */
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right of the screen */
+}
+
+/* Change background color on hover */
+#resetButton:hover {
+    background-color: #ff0000; /* Darker red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack containers on smaller screens */
+        align-items: center; /* Center align items */
+    }
+    
+    .button-container, .light-buttons {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 15px; /* Spacing between button containers */
+    }
+    
+    #simulationCanvas {
+        min-height: 300px; /* Adjust minimum height for smaller screens */
+    }
+}
